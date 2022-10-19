@@ -1,0 +1,148 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+body {
+ background:#ddea7f ;
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:20px;
+ height: 100%;
+}
+
+header {
+  background:#dfdb7d ;
+  width:100%;
+  height: 200px;
+  text-align: center;
+  position: fixed;
+  top: 0px;
+}
+
+header section h1{
+  font-size: 40px;
+  font-weight: bold;
+}
+
+header section h2{
+  font-size: 25px;
+  font-weight: bold;
+}
+
+header nav a{
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 5PX;
+  line-height: 1;
+  border: 2px solid;
+  padding: 10px 5px;
+  position: relative;
+}
+
+header div{
+  margin-top:-60px;  
+}
+
+div img{
+  margin-top: 200px;
+  width:35%;
+}
+
+.img1 {
+  margin-left:15%;
+}
+footer{
+  text-align: center;
+  font-size: 30px;
+  background: rgb(216, 134, 134);
+  position: fixed;
+   bottom:0;
+   width:100%; 
+  height: 110px;
+}
+.dir{
+  font-weight:bold;
+}
+
+.vista{
+  margin-top: 230px;
+  border: 3px solid;  
+  border-radius: 30PX;
+  width: 70%;
+  margin-left: 15%;
+  text-align: center;
+  margin-bottom: 120px;
+}
+.formulario{
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.row{
+  margin: 10px
+}
+
+input{
+  height: 25px;
+  padding: 0 10px;
+}
+
+.botones{
+  font-weight:bold;
+  font-size:32px;
+  color: red
+}
+
+#description{
+  vertical-align: top;
+}
+
+button{
+  border: 2px solid;
+  border-radius: 5px;
+  color: darkred;
+  background-color: whitesmoke;
+  padding:10px 10px;
+  font-weight:bold;
+
+}
+
+table{
+  margin-left: 10%;
+  padding-bottom: 10px;  
+  margin: auto;
+}
+
+th{
+  padding: 15px;
+}
+
+#total{
+  text-align: right;
+  font-weight: bold;
+  font-size: 20px;
+  width: 15%;
+}
+
+.login-box{
+  text-align: center;
+  margin-top: 13%;
+  margin-bottom: 9%;
+}
+
+.form-control{
+  margin-top: 10px;
+  width: 30%;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 15px;
+  border-color: rgb(172, 98, 98);
+  border-width: 2px;
+  border-style: double;
+}
+
+.login-logo{
+  font-size: 30px;
+}
