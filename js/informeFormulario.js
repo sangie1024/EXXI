@@ -27,23 +27,6 @@ function addVenta(nombre, codigo, cantidad, precio) {
 }
 
 function informe() {
-  var mesReporte = "";
-  var item = "productos"
-  
-  if (item != "productos") {
-    //mesReporte = mes.te;
-  }
-  var parametros = {
-    buscar: item,
-    mes: mesReporte,
-  };
-  $.ajax({
-    data: parametros,
-    dataType: "json",
-    async: false,
-    url: "../modelos/obtenerInforme.php",
-    type: "post",
-    complete: function () {
       var thead = document.querySelector("#tablaInforme thead"),
     tbody = document.querySelector("#tablaInforme tbody");
     // total = document.querySelector("#total"),
@@ -56,7 +39,7 @@ function informe() {
       stockCell = head.insertCell(1);
       nameCell.innerHTML = "Producto";
       stockCell.innerHTML = "Inventario";
-      var valores = '.$informe.';
+
       for (var i = 0; i < valores.length; i++) {
         alert(valores.length)
         var row = tbody.insertRow(i),
