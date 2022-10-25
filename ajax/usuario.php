@@ -9,9 +9,9 @@
 	$_SESSION['usuario'] = $user;
 
 	
-	//$clavehash=hash("SHA256", $pass);	
+	$clavemd5= MD5($pass);	
 	//se ejecuta la consulta para verificar si el usuario y la contraceña son validos
-	$query = $usuario->login($user, $pass);
+	$query = $usuario->login($user, $clavemd5);
 	$resultado = mysqli_num_rows($query)
 	?>
 	<?php

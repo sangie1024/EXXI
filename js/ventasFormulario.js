@@ -97,7 +97,6 @@ function guardar() {
       priceCell = row.cells[2].innerText,
       amountCell = row.cells[3].innerText;
 
-
     var parametros = {
       guardar: "ventas",
       idcell: idCell,
@@ -111,9 +110,8 @@ function guardar() {
       type: "post",
       success: function (valores) {},
     });
-
-    cancelar();
   }
+  cancelar();
 }
 
 function cancelar() {

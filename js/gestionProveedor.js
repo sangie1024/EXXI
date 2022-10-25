@@ -1,7 +1,6 @@
 // Cunado haga click en elemento con los id entonces se ejecuta la función correspondiente
 document.querySelector("#btnGuardar").addEventListener("click", validar);
 document.querySelector("#btnLimpiar").addEventListener("click", Limpiar);
-document.querySelector("#btnEliminar").addEventListener("click", Eliminar);
 
 // Se obtiene la informacion de cada campo
 var nit = document.querySelector("#nit"),
@@ -52,5 +51,13 @@ function guardar(Nit, Nombre, Telefono, TelContacto, Correo,  Contacto) {
   alert("Proveedor registrado");
 }
 
+function Limpiar() {
+  document.querySelector("#nit").value = "";
+  document.querySelector("#nombre").value = "";
+  document.querySelector("#telefono").value = "";
+  document.querySelector("#telefonoContacto").value = "";
+  document.querySelector("#contacto").value = "";
+  document.querySelector("#correo").value = "";
+}
 
 
