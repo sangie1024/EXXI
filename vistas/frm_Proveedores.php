@@ -1,48 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
+  <?php
+  require "comunes/head.php";
+  ?>
+  <title>Proveedores</title>
+</head>
+
+<body>
+  <header>
     <?php
-      require "comunes/head.php";
-      ?>
-    <title>Proveedores</title>
-  </head>
-  <body>
-    <header>
-    <?php
-      require "comunes/headed.php";
-      ?>
+    require "comunes/headed.php";
+    ?>
   </header>
   <div class="vista">
     <div class="botones">Proveedores</div>
     <form class="formulario">
       <div class="row">
         <label id="cod">Nit</label>
-        <input type="number" id="nit"onblur="buscar();">      
+        <input type="number" id="nit" onblur="buscar();">
         <label id="name">Nombre</label>
-        <input type="text" id= "nombre">      
+        <input type="text" id="nombre">
       </div>
-      <div  class="row">
+      <div class="row">
         <label id="description">Teléfono</label>
-        <input type="number" id="telefono"> 
+        <input type="number" id="telefono">
         <label for="">Contacto</label>
-        <input type="text" id="contacto">   
-      </div> 
-     <div  class="row">
-       <label >Teléfono de contacto</label>
-       <input type="number"id="telefonoContacto">
-       <label >Correo</label>
-       <input type="text" id="correo">
-       
-     </div>
-     
+        <input type="text" id="contacto">
+      </div>
+      <div class="row">
+        <label>Teléfono de contacto</label>
+        <input type="number" id="telefonoContacto">
+        <label>Correo</label>
+        <input type="text" id="correo">
+
+      </div>
       <div>
         <button type="button" id="btnGuardar">Guardar</button>
-        <button type="botton" id="btnEliminar">Eliminar</button>
         <button type="button" id="btnLimpiar">Limpiar</button>
 
       </div>
-     <script src="../js/gestionProveedor.js"></script>
-
+      <script src="../js/gestionProveedor.js"></script>
       <script type="text/javascript">
         $(document).keypress(function(event) {
           if (event.which === 13) {
@@ -63,23 +62,20 @@
             type: 'post',
             success: function(valores) {
               $("#nombre").val(valores.Nombre);
-              $("#telefono"). val(valores.Telefono);
+              $("#telefono").val(valores.Telefono);
               $("#contacto").val(valores.Contacto);
               $("#telefonoContacto").val(valores.TelefonoContacto);
-              $("#correo"). val(valores.Correo);
+              $("#correo").val(valores.Correo);
             }
-            
-
           })
         }
-        
       </script>
     </form>
-  </div>    
-  </body>
-  <footer>
+  </div>
+</body>
+<footer>
   <?php
   require "comunes/footer.php";
   ?>
-  </footer>
+</footer>
 </html>

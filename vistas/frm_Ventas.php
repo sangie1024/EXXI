@@ -22,6 +22,7 @@
         <input type="number" id="codigo" onblur="buscar();">
         <label id="description">Cantidad</label>
         <input type="number" id="cantidad" required>
+        <input type="number" id="stock" style="display:none">
       </div>
       <div class="row">
         <label id="name">Nombre</label>
@@ -74,6 +75,7 @@
             success: function(valores) {
               $("#nombre").val(valores.nombre);
               $("#precio").val(valores.precio);
+              $("#stock").val(valores.stock);
             }
           })
         }
