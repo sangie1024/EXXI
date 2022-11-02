@@ -12,7 +12,7 @@ if ($_POST['buscar']  == "1") {
   $cod = ($_POST['cod']);
 
   // Armar la centecia para traer los valores nombre, precioUnitario y costoUnitario
-  $sql = "SELECT p.nombre, c.precioUnitario, c.costoUnitario FROM productos p INNER JOIN compras c WHERE p.codigo = $cod and p.codigo = c.codigoProducto ORDER BY c.id DESC LIMIT 1";
+  $sql = "SELECT p.nombre, c.precioUnitario, c.costoUnitario, p.stock FROM productos p INNER JOIN compras c WHERE p.codigo = $cod and p.codigo = c.codigoProducto ORDER BY c.id DESC LIMIT 1";
   $resultados = mysqli_query($conn, $sql);
 
   while ($consulta = mysqli_fetch_array($resultados)) {
@@ -21,6 +21,8 @@ if ($_POST['buscar']  == "1") {
     $valores['nombre'] = $consulta['nombre'];
     $valores['precio'] = $consulta['precioUnitario'];
     $valores['costo'] = $consulta['costoUnitario'];
+    $valores['stock'] = $consulta['stock'];
+
   }
 }
 

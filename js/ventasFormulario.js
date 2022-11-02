@@ -9,18 +9,22 @@ var listaVentas = [],
   nombre = document.querySelector("#nombre"),
   codigo = document.querySelector("#codigo"),
   precio = document.querySelector("#precio"),
-  cantidad = document.querySelector("#cantidad");
+  cantidad = document.querySelector("#cantidad"),
+  stock = document.querySelector("#stock");
 
 
 function listado() {
   var lNombre = nombre.value,
     lCodigo = codigo.value,
     lPrecio = precio.value,
-    lCantidad = cantidad.value;
+    lCantidad = cantidad.value,
+    lStock = stock.value;
 
   // Valida que los campo no esten vacios, si no hay ningún campo vacío llama a la función guardar
   if (lCantidad === "" || lCodigo === "" || lPrecio === "") {
     alert("Diligencie todos los campos");
+  } else if(lCantidad > lStock) {
+    alert("De este producto existen " + lStock + " unidades")
   } else {
     addVenta(lNombre, lCodigo, lCantidad, lPrecio);
   }
@@ -128,4 +132,5 @@ function limpiar() {
   codigo.value = "";
   precio.value = "";
   cantidad.value = "";
+  stock.value = "";
 }
